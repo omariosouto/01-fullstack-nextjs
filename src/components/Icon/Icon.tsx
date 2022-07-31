@@ -15,7 +15,7 @@ interface IconProps {
   styleSheet?: StyleSheet;
   size?: keyof typeof iconSizes;
 }
-export default function Icon({ size, name }: IconProps) {
+export default function Icon({ size, name, ...props }: IconProps) {
   const CurrentIcon = icons[name];
   if(!CurrentIcon) return <>"${name}" is not a valid <Icon /></>;
   return (
@@ -30,6 +30,7 @@ export default function Icon({ size, name }: IconProps) {
       fill="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <CurrentIcon />
     </BaseComponent>
