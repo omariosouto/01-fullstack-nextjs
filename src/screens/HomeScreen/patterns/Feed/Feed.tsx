@@ -23,6 +23,9 @@ export default function Feed({ children }) {
 Feed.Header = () => {
   return (
     <Box>
+      <Button>
+        Olá pessoas!
+      </Button>
       <Button.Base href="https://github.com/omariosouto">
         <Image
           styleSheet={{
