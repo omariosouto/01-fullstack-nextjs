@@ -1,9 +1,9 @@
 import Box from "@src/components/Box/Box";
 
-export default function Background() {
+export default function Footer() {
   return (
     <Box>
-      Background
+      Footer
     </Box>
   )
 }
