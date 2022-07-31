@@ -17,6 +17,8 @@ const Text = React.forwardRef(({
   variant,
   ...props
 }: TextProps, ref) => {
+  console.log('tag', tag);
+  console.log(styleSheet);
   const theme = useTheme();
   const textVariant = theme.typography.variants[variant];
 
