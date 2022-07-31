@@ -19,6 +19,12 @@ export default function HomeScreen() {
         alignItems: 'center',
       }}
     >
+      <Link colorVariant="negative" href="/sobre">
+        Vá para a página Sobre
+      </Link>
+      <Link href="https://google.com">
+        Ir para o google
+      </Link>
       <Background />
       <Menu />
       <Feed>
