@@ -4,14 +4,14 @@ import React from 'react';
 
 interface BoxProps {
   // Vamos resolver esse any depois
-  tag: any;
-  children: React.ReactNode;
-  styleSheet: StyleSheet;
+  tag?: any;
+  children?: React.ReactNode;
+  styleSheet?: StyleSheet;
 }
-export default function Box({ styleSheet, children, tag }: BoxProps) {
+export default function Box({ styleSheet, children, tag, ...props }: BoxProps) {
   const Tag = tag || 'div';
   return (
-    <BaseComponent as={Tag} styleSheet={styleSheet}>
+    <BaseComponent as={Tag} styleSheet={styleSheet} {...props}>
       {children}
     </BaseComponent>
   );
